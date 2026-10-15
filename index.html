@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MODERMILL | Free Fire Top-Up</title>
+<style>
+:root{--gold:#ffd52a;--bg:#080d18;--card:#121d30;--muted:#a8b5c9;--line:#2b3b54}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#1a2c49,var(--bg) 65%);color:#fff;font-family:Arial,sans-serif}
+header{padding:18px 6%;display:flex;align-items:center;justify-content:space-between;background:#080d18ed;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+.logo{font-size:25px;font-weight:900;letter-spacing:1px}.gold{color:var(--gold)}
+nav a{color:#dce5f3;text-decoration:none;margin-left:16px;font-size:13px}
+.hero{text-align:center;padding:65px 16px 45px}
+.pill{display:inline-block;border:1px solid #77631e;color:var(--gold);padding:9px 15px;border-radius:30px;font-size:12px}
+h1{font-size:clamp(40px,8vw,72px);line-height:1.05;margin:22px 0}
+p{line-height:1.7}.muted,.subtitle{color:var(--muted)}
+.cta,.btn{display:inline-block;background:var(--gold);color:#111;font-weight:bold;border:0;border-radius:9px;padding:13px 18px;text-decoration:none;cursor:pointer}
+.cta{margin-top:12px}.btn{width:100%;margin-top:12px}
+.btn:disabled{opacity:.6;cursor:wait}
+.features{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:28px;font-size:13px}
+.features span{color:var(--gold)}
+main{max-width:1050px;margin:auto;padding:20px 16px 60px}
+.section-title{text-align:center;font-size:29px;margin:30px 0 8px}
+.subtitle{text-align:center;font-size:14px;margin-bottom:25px}
+.panel{background:linear-gradient(145deg,#121d30,#0b111d);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:20px}
+.steps,.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.steps{margin-bottom:20px}
+.step{padding:15px;background:#101a2a;border:1px solid var(--line);border-radius:11px}
+.step b{color:var(--gold)}.step small{display:block;color:var(--muted);margin-top:8px;line-height:1.5}
+label{display:block;font-weight:bold;margin:15px 0 9px;font-size:14px}
+input{width:100%;padding:14px;background:#080e19;color:#fff;border:1px solid #394861;border-radius:9px;font-size:15px;outline:none}
+input:focus{border-color:var(--gold)}
+#playerResult{display:none;white-space:pre-line;overflow-wrap:anywhere;margin-top:15px;padding:14px;background:#0a1220;border:1px solid var(--line);border-radius:10px;line-height:1.7}
+#playerResult.show{display:block}#playerResult.success{border-color:#27875b}#playerResult.error{border-color:#a14b4b}
+.pack{text-align:center;padding:20px 12px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,#152139,#0b111c);transition:.2s}
+.pack:hover,.pack.selected{border-color:var(--gold);transform:translateY(-3px)}
+.gem{font-size:37px}.pack h3{font-size:16px}.badge{font-size:10px;color:var(--gold);margin-bottom:12px}
+.price{font-size:23px;font-weight:900;color:var(--gold)}.currency{font-size:11px;color:var(--muted)}
+#status,#voucherStatus{color:var(--gold);font-size:14px;line-height:1.7;margin-top:15px}
+.notice{font-size:12px;color:var(--muted);line-height:1.7}
+.secondary{background:#202d42;color:#fff;border:1px solid #3b4a61}
+footer{text-align:center;border-top:1px solid var(--line);padding:28px 15px;color:var(--muted);font-size:12px}
+@media(max-width:650px){header{padding:14px;gap:12px;flex-wrap:wrap}nav a{margin:0 10px 0 0}.hero{padding-top:45px}.steps{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pack{padding:15px 8px}.price{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="logo">⚡ MODER<span class="gold">MILL</span></div><div class="muted" style="font-size:10px;letter-spacing:3px;margin-top:4px">FAST • SAFE • CHEAP</div></div>
+  <nav><a href="#home">Bosh sahifa</a><a href="#topup">Diamondlar</a><a href="#voucher">Voucher</a></nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="pill">✦ GAMING TOP-UP STORE ✦</div>
+  <h1>FREE FIRE<br><span class="gold">DIAMONDS</span></h1>
+  <p class="muted">Sevimli o‘yining uchun diamond paketini tanla.<br>MODERMILL — yangi avlod top-up loyihasi.</p>
+  <a class="cta" href="#topup">💎 Paketlarni ko‘rish ↓</a>
+  <div class="features"><div><span>✦</span> Qulay buyurtma</div><div><span>◆</span> ID tekshirish</div><div><span>⚡</span> Zamonaviy dizayn</div></div>
+</section>
+
+<main>
+  <h2 class="section-title" id="topup">Diamond paketlari</h2>
+  <p class="subtitle">Avval Player ID'ni tekshiring, so‘ng paket tanlang.</p>
+
+  <div class="steps">
+    <div class="step"><b>01 / PLAYER ID</b><small>ID raqamingizni kiriting va nickname'ni tekshiring.</small></div>
+    <div class="step"><b>02 / DIAMONDS</b><small>Kerakli diamond paketini tanlang.</small></div>
+    <div class="step"><b>03 / PAYMENT</b><small>Hozircha to‘lov tizimi ulanmagan.</small></div>
+  </div>
+
+  <section class="panel">
+    <label for="playerId">Free Fire Player ID</label>
+    <input id="playerId" inputmode="numeric" maxlength="12" autocomplete="off" placeholder="O‘yinchi ID raqamini kiriting">
+    <button class="btn" id="checkButton">🔍 ID'ni tekshirish</button>
+    <div id="playerResult" aria-live="polite"></div>
+
+    <h3 style="margin-top:28px">💎 Diamond miqdorini tanlang</h3>
+    <div class="grid" id="packs">
+      <article class="pack" data-amount="100" data-price="29"><div class="gem">💎</div><h3>100 Diamonds</h3><div class="badge">STARTER PACK</div><div class="price">29 <span class="currency">KGS</span></div><button class="btn choose">Tanlash</button></article>
+      <article class="pack" data-amount="310" data-price="79"><div class="gem">💎</div><h3>310 Diamonds</h3><div class="badge">POPULAR PACK</div><div class="price">79 <span class="currency">KGS</span></div><button class="btn choose">Tanlash</button></article>
+      <article class="pack" data-amount="520" data-price="129"><div class="gem">💎</div><h3>520 Diamonds</h3><div class="badge">HOT PACK ✦</div><div class="price">129 <span class="currency">KGS</span></div><button class="btn choose">Tanlash</button></article>
+      <article class="pack" data-amount="1060" data-price="249"><div class="gem">💎</div><h3>1060 Diamonds</h3><div class="badge">VALUE PACK</div><div class="price">249 <span class="currency">KGS</span></div><button class="btn choose">Tanlash</button></article>
+      <article class="pack" data-amount="2180" data-price="499"><div class="gem">💎</div><h3>2180 Diamonds</h3><div class="badge">PRO PACK</div><div class="price">499 <span class="currency">KGS</span></div><button class="btn choose">Tanlash</button></article>
+      <article class="pack" data-amount="5600" data-price="1199"><div class="gem">💎</div><h3>5600 Diamonds</h3><div class="badge">ULTIMATE PACK</div><div class="price">1199 <span class="currency">KGS</span></div><button class="btn choose">Tanlash</button></article>
+    </div>
+    <div id="status" aria-live="polite">Avval ID raqamingizni tekshiring.</div>
+    <p class="notice">Muhim: narxlar hozircha demo. Sayt real pul olmaydi va diamond yubormaydi. Haqiqiy savdo uchun tasdiqlangan to‘lov hamda diamond yetkazib berish xizmati kerak.</p>
+  </section>
+
+  <section class="panel" id="voucher">
+    <h2>🎟️ Voucher kodi</h2>
+    <input id="voucherCode" placeholder="Chegirma kodini kiriting">
+    <button class="btn secondary" id="voucherButton">Kodni tekshirish</button>
+    <p id="voucherStatus" class="notice">Voucher tizimi hali ulanmagan.</p>
+  </section>
+</main>
+
+<footer><div class="logo">MODER<span class="gold">MILL</span></div><p>FAST • SAFE • CHEAP</p><p>© 2026 MODERMILL — Demo versiya</p></footer>
+
+<script>
+const PLAYER_API = 'http://127.0.0.1:5000/nickname?uid=';
+let verifiedId = null;
+let verifiedNickname = null;
+let selected = null;
+
+const playerId = document.getElementById('playerId');
+const checkButton = document.getElementById('checkButton');
+const result = document.getElementById('playerResult');
+const status = document.getElementById('status');
+
+function showResult(message, type) {
+  result.className = 'show ' + (type || '');
+  result.textContent = message;
+}
+
+function clearVerification() {
+  verifiedId = null;
+  verifiedNickname = null;
+  selected = null;
+  document.querySelectorAll('.pack').forEach(p => p.classList.remove('selected'));
+  status.textContent = 'ID o‘zgardi. Qaytadan tekshiring.';
+  result.className = '';
+  result.textContent = '';
+}
+
+playerId.addEventListener('input', clearVerification);
+
+async function checkPlayer() {
+  const id = playerId.value.trim();
+  verifiedId = null;
+  verifiedNickname = null;
+  selected = null;
+  document.querySelectorAll('.pack').forEach(p => p.classList.remove('selected'));
+
+  if (!/^\d{8,12}$/.test(id)) {
+    showResult('❌ ID 8–12 ta raqamdan iborat bo‘lishi kerak.', 'error');
+    return;
+  }
+
+  checkButton.disabled = true;
+  checkButton.textContent = '⏳ Tekshirilmoqda...';
+  showResult('O‘yinchi ma’lumotlari tekshirilmoqda...', '');
+
+  try {
+    const response = await fetch(PLAYER_API + encodeURIComponent(id), {
+      headers: {Accept: 'application/json'}
+    });
+    let data;
+    try {
+      data = await response.json();
+    } catch {
+      throw new Error('API JSON formatida javob bermadi.');
+    }
+
+    if (!response.ok) {
+      throw new Error(data.error || data.message || `HTTP ${response.status}`);
+    }
+    if (data.success !== true || typeof data.nickname !== 'string' || !data.nickname.trim()) {
+      throw new Error(data.error || data.message || 'Nickname topilmadi.');
+    }
+
+    verifiedId = id;
+    verifiedNickname = data.nickname.trim();
+    showResult(`✅ O‘yinchi topildi!\nNickname: ${verifiedNickname}\nID: ${verifiedId}\nRegion: ${data.region || 'Noma’lum'}`, 'success');
+    status.textContent = 'ID tekshirildi. Endi paket tanlashingiz mumkin.';
+  } catch (error) {
+    const message = error instanceof TypeError
+      ? 'API bilan bog‘lanib bo‘lmadi. Python serveri ishlayotganini tekshiring.'
+      : (error.message || 'Noma’lum xato.');
+    showResult(`⚠️ Nickname olinmadi: ${message}\nBu ID noto‘g‘ri degani bo‘lmasligi mumkin. API vaqtincha ishlamayotgan yoki so‘rov cheklangan bo‘lishi mumkin.`, 'error');
+  } finally {
+    checkButton.disabled = false;
+    checkButton.textContent = "🔍 ID'ni tekshirish";
+  }
+}
+
+checkButton.addEventListener('click', checkPlayer);
+
+document.querySelectorAll('.choose').forEach(button => {
+  button.addEventListener('click', () => {
+    if (!verifiedId || !verifiedNickname || playerId.value.trim() !== verifiedId) {
+      status.textContent = 'Avval ID ni tekshirib, nickname topilganini tasdiqlang.';
+      playerId.focus();
+      return;
+    }
+    const card = button.closest('.pack');
+    document.querySelectorAll('.pack').forEach(p => p.classList.remove('selected'));
+    card.classList.add('selected');
+
+    selected = {
+      id: verifiedId,
+      nickname: verifiedNickname,
+      amount: card.dataset.amount,
+      price: card.dataset.price
+    };
+    status.textContent = `${selected.nickname} | ${selected.amount} Diamonds | ${selected.price} KGS. Bu faqat demo tanlov; haqiqiy buyurtma yoki to‘lov emas.`;
+  });
+});
+
+document.getElementById('voucherButton').addEventListener('click', () => {
+  const code = document.getElementById('voucherCode').value.trim();
+  document.getElementById('voucherStatus').textContent = code
+    ? 'Voucher tekshirish serveri hali ulanmagan. Bu kod uchun chegirma berilmadi.'
+    : 'Avval voucher kodini kiriting.';
+});
+</script>
+</body>
+</html>
